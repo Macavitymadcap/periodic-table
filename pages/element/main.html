@@ -1,0 +1,110 @@
+<button popovertarget="article-popover" popoveraction="toggle">
+    &#10060;
+</button>
+<h2>&lt;main&gt;</h2>
+<details open>
+    <summary>Description</summary>
+    <p>
+        The <code>&lt;main&gt;</code> tag is used to denote the main content of
+        a document. It is intended to contain content that is directly related
+        to the central topic of the document or the central functionality of an
+        application. The content inside the <code>&lt;main&gt;</code> element
+        should be unique to the document and not repeated across other pages.
+    </p>
+    <p>
+        The tag is strictly informative and does not contribute the document's 
+        outline. It has no bearing on on the DOM's concept of the structure of
+        the page. It behaves like a main landmark role, which can be 
+        used by assistive technology to quickly identify and navigate to large 
+        sections of the document. 
+    </p>
+    <p>
+        The <code>&lt;main&gt;</code> element must not be a descendant of an
+        <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>,
+        <code>&lt;footer&gt;</code>, <code>&lt;header&gt;</code>, or
+        <code>&lt;nav&gt;</code> element.
+    </p>
+</details>
+<details>
+    <summary>Attributes</summary>
+    <p>
+        The <code>&lt;main&gt;</code> element does not have any unique
+        attributes, but it can include
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" target="_blank">
+            Global Attributes</a>.
+    </p>
+    <ul>
+        <li>
+            <code>id</code> Lets the lement be a target of a skip navigation 
+            link. This techinque, "skipnav", is a technique that allows an 
+            assistive technology user to quickly bypass large sections of 
+            repeated content.
+        </li>
+    </ul>
+</details>
+<details>
+    <summary>Summary</summary>
+    <p>
+    <table>
+        <tbody>
+            <tr>
+                <th>Content categories</th>
+                <td>Flow content, palpable content.</td>
+            </tr>
+            <tr>
+                <th>Permitted content</th>
+                <td>
+                    Flow content.
+                </td>
+            </tr>
+            <tr>
+                <th>Tag omission</th>
+                <td>None; both start and end tags are mandatory.</td>
+            </tr>
+            <tr>
+                <th>Permitted parents</th>
+                <td>
+                    Any element that can contain flow content and is 
+                    <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element"
+                        target="_blank">hierarchically correct</a>.
+                </td>
+            </tr>
+            <tr>
+                <th>Implicit ARIA role</th>
+                <td>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/main_role"
+                        target="_blank">main</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Permitted ARIA roles</th>
+                <td>
+                    No <code>role</code> permitted.
+                </td>
+            </tr>
+            <tr>
+                <th>DOM interface</th>
+                <td>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement"
+                        target="_blank">HTMLElement</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+</details>
+<details>
+    <summary>Sources</summary>
+    <ul>
+        <li>
+            <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element" target="_blank">HTML
+                Standard: The main element
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main" target="_blank">MDN: &lt;main&gt;:
+                MDN: The Main element
+            </a>
+        </li>
+    </ul>
+</details>

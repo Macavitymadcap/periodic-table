@@ -1,0 +1,155 @@
+<button popovertarget="article-popover" popoveraction="toggle">
+    &#10060;
+</button>
+<h2>&lt;table&gt;</h2>
+<details open>
+    <summary>Description</summary>
+    <p>
+        The <code>&lt;table&gt;</code> tag defines an HTML table. An HTML table
+        consists of one <code>&lt;table&gt;</code> element and one or more
+        <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code>
+        elements. The <code>&lt;tr&gt;</code> element defines a table row, the
+        <code>&lt;th&gt;</code> element defines a table header, and the
+        <code>&lt;td&gt;</code> element defines a table cell.
+    </p>
+    <p>
+        The <code>&lt;table&gt;</code> box establishes a table formatting 
+        context. Elements inside the <code>&lt;table&gt;</code> generate
+        rectangular boxes. Each box occupies a number of table cells 
+        according to the following rules:
+        <ol>
+            <li>
+                The row boxes fill the table in the source code order from top
+                to bottom. Each row box occupies one row of cells.
+            </li>
+            <li>
+                A row group box occupies one or more row boxes.
+            </li>
+            <li>
+                Column boxes are placed next to each other in source code 
+                order. A column box occupies one or more columns of table 
+                cells.
+            </li>
+            <li>
+                A column group box occupies one or more column boxes.
+            </li>
+            <li>
+                A cell box may span over multiple rows and columns. User agents
+                trim cells to fit in the available number of rows and columns.
+            </li>
+        </ol>
+        Table cells do have padding. Boxes that make up a table do not have
+        margins.
+    </p>
+</details>
+<details>
+    <summary>Attributes</summary>
+    <p>
+        The <code>&lt;table&gt;</code> element includes
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" target="_blank">
+            Global Attributes</a>.
+    </p>
+    <ul>
+        <li>
+            <code>border</code>: Specifies whether the table should have borders.
+        </li>
+        <li>
+            <code>height</code>: Some browsers support a non-standard 
+            interpretation of height. The unitless value sets a minimum 
+            absolute height in pixels. If set as a percent value, the minimum 
+            table height will be relative to the parent container's height. Use
+            the <code>min-height</code> CSS property instead, as this attribute
+            is  deprecated.
+        </li>
+        <li>
+            <code>dir</code>: Alters the layout of columns; <code>ltr</code> 
+            for left-to-right or <code>rtl</code> for right-to-left. 
+        </li>
+    </ul>
+</details>
+<details>
+    <summary>Summary</summary>
+    <p>
+    <table>
+        <tbody>
+            <tr>
+                <th>Content categories</th>
+                <td>Flow content.</td>
+            </tr>
+            <tr>
+                <th>Permitted content</th>
+                <td>
+                    In this order:
+                    <ol>
+                        <li>
+                            an optional <code>&lt;caption&gt;</code> element,
+                        </li>
+                        <li>
+                            zero or more <code>&lt;colgroup&gt;</code> elements,
+                        </li>
+                        <li>
+                            an optional <code>&lt;thead&gt;</code> element,
+                        </li>
+                        <li>
+                            either one or more of the following:
+                            <ul>
+                                <li>
+                                    zero or more <code>&lt;tbody&gt;</code> elements
+                                </li>
+                                <li>
+                                    one or more <code>&lt;tr&gt;</code> elements
+                            </ul>
+                        </li>
+                        <li>
+                            an optional <code>&lt;tfoot&gt;</code> element
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <th>Tag omission</th>
+                <td>None; both start and end tags are mandatory.</td>
+            </tr>
+            <tr>
+                <th>Permitted parents</th>
+                <td>Any element that can contain flow content.</td>
+            </tr>
+            <tr>
+                <th>Implicit ARIA role</th>
+                <td>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/table_role"
+                        target="_blank">table</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Permitted ARIA roles</th>
+                <td>
+                    Any
+                </td>
+            </tr>
+            <tr>
+                <th>DOM interface</th>
+                <td>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement"
+                        target="_blank">HTMLTableElement</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+</details>
+<details>
+    <summary>Sources</summary>
+    <ul>
+        <li>
+            <a href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element" target="_blank">HTML
+                Standard: The table element
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">MDN: &lt;table&gt;:
+                MDN: The Table element
+            </a>
+        </li>
+    </ul>
+</details>

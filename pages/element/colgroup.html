@@ -1,0 +1,136 @@
+<button popovertarget="article-popover" popoveraction="toggle">
+    &#10060;
+</button>
+<h2>&lt;colgroup&gt;</h2>
+<details open>
+    <summary>Description</summary>
+    <p>
+        The <code>&lt;colgroup&gt;</code> tag defines a group of columns within
+        a <code>&lt;table&gt;</code>. It is used to apply styles or attributes
+        to entire columns, instead of individual cells. The
+        <code>&lt;colgroup&gt;</code> element can contain one or more
+        <code>&lt;col&gt;</code> elements.
+    </p>
+    <p>
+        It should appear after any <code>&lt;caption:gt;</code> element but
+        before any <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>,
+        <code>&lt;tfoot&gt;</code> and <code>&lt;tr&gt;</code> elements.
+
+    </p>
+    <p>
+        Only a limited number of CSS properties effect it:
+    <ul>
+        <li>
+            <code>background</code>: Will set the background for cells
+            within the column. As the column background color is painted
+            on top of the table and column groups, but behind background
+            colours applied to the row groups, and the individual cells,
+            backgrounds applied to table columns are only visible if every
+            layer painted on top of them has a transparent background.
+        </li>
+        <li>
+            <code>border</code>: Only applies if
+            <code>border-collapse: collapse</code> is set on the
+            <code>&lt;table&gt;</code>.
+        </li>
+        <li>
+            <code>visibility</code>: The value <code>collapse</code> for
+            a column results in all cells of that column not being
+            rendered, and cells spanning into other columns being clipped.
+            The space these columns would have occupied is removed.
+            However, the size of other columns is still calculated as
+            though the cells in the collapsed column(s) are present.
+            Other values for visibility have no effect.
+        </li>
+        <li>
+            <code>width</code>: defines a minimum width for the column.
+        </li>
+    </ul>
+    </p>
+</details>
+<details>
+    <summary>Attributes</summary>
+    <p>
+        The <code>&lt;colgroup&gt;</code> element includes
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" target="_blank">
+            Global Attributes</a>.
+    </p>
+    <ul>
+        <li>
+            <code>span</code>: A non-zero positive integer which specifies the
+            number of columns the element spans. It is not permitted if there
+            are one or more <code>&ltcol&gt;</code> elements within the
+            <code>colgroup</code>.
+        </li>
+    </ul>
+</details>
+<details>
+    <summary>Summary</summary>
+    <p>
+    <table>
+        <tbody>
+            <tr>
+                <th>Content categories</th>
+                <td>None.</td>
+            </tr>
+            <tr>
+                <th>Permitted content</th>
+                <td>
+                    If the <code>span</code> attribute is present: none,
+                    otherwise zero or more <code>&lt;col&gt;</code> elements.
+                </td>
+            </tr>
+            <tr>
+                <th>Tag omission</th>
+                <td>
+                    The start tag may be omitted if its first child is a
+                    <code>&lt;col&gt;</code> and if it is not preceded by a
+                    <code>&lt;colgroup&gt;</code> whose end tag has been
+                    omitted. The end tag may be omitted if it is not
+                    followed by a space or a comment.
+                </td>
+            </tr>
+            <tr>
+                <th>Permitted parents</th>
+                <td>
+                    A <code>&lt;table&gt;</code> element.
+                </td>
+            </tr>
+            <tr>
+                <th>Implicit ARIA role</th>
+                <td>
+                    <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+                        target="_blank">No corresponding role</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Permitted ARIA roles</th>
+                <td>No <code>role</code> permitted</td>
+            </tr>
+            <tr>
+                <th>DOM interface</th>
+                <td>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableColElement"
+                        target="_blank">HTMLTableColElement</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+</details>
+<details>
+    <summary>Sources</summary>
+    <ul>
+        <li>
+            <a href="https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element" target="_blank">HTML
+                Standard: The colgroup element
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup" target="_blank">MDN:
+                &lt;colgroup&gt;:
+                MDN: The Colgroup element
+            </a>
+        </li>
+    </ul>
+</details>

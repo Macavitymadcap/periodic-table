@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --font-colour-dark: black;
+    --font-colour-light: white;
+    --link-colour: #00a6ff;
+    --code-background: #f8f8f87d;
+
+    --color-root: #E9D8A6;
+    --color-tabular: #94D2BD;
+    --color-metadata: #0A9396;
+    --color-text: #EE9B00;
+    --color-grouping: #CA6702;
+    --color-forms: #BB3E03;
+    --color-document: #AE2012;
+    --color-interactive: #9B2226;
+    --color-embedding: #005F73;
+    --colour-background: #636363;
+
+    --border-radius: 12px;
+    --element-min-width: 80px;
+    --element-min-height: 80px;
+    --grid-gap: 2px;
+
+    --font-size-small: 10px;
+    --font-size-medium: 16px;
+    --font-size-large: 18px;
+    --font-sans-family: "Lato", sans-serif;
+    --font-monospace-family: "Ubuntu Mono", monospace;
+}
+
+body {
+    font-family: var(--font-monospace-family);
+    color: var(--font-colour-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--colour-background);
+}
+
+div.element {
+    min-width: var(--element-min-width);
+    min-height: var(--element-min-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-small);
+    border: none;
+    border-radius: var(--border-radius);
+    text-align: center;
+    position: relative;
+
+    span.tag {
+        font-weight: bold;
+    }
+
+    span.number {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+
+div.element:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    box-shadow: 0 0 10px rgba(212, 212, 212, 0.5);
+    z-index: 1;
+}
+
+div.legend {
+    display: grid;
+    grid-template-columns: repeat(9, var(--element-min-width));
+    grid-gap: var(--grid-gap);
+
+    span {
+        font-weight: bold;
+    }
+}
+
+:popover-open {
+    position: relative;
+}
+
+#article-popover {
+    color: var(--font-colour-light);
+    background: var(--font-colour-dark);
+    z-index: 2;
+    border-radius: var(--border-radius);
+    padding: 1em;
+    width: 60vw;
+    max-height: 80vh;
+
+    button {
+        border-radius: var(--border-radius);
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+
+    a {
+        color: var(--link-colour);
+    }
+
+    summary {
+        font-size: var(--font-size-large);
+    }
+
+    summary:hover, 
+    a:hover {
+        cursor: pointer;
+    }
+
+    p {
+        word-wrap: break-word;
+    }
+
+    code {
+        padding: 0 .25em;
+        border-radius: var(--border-radius);
+        background: var(--code-background);
+    }
+}
+
+
+div.root {
+    background-color: var(--color-root);
+}
+
+div.tabular {
+    background-color: var(--color-tabular);
+}
+
+div.metadata {
+    background-color: var(--color-metadata);
+    color: var(--font-colour-light);
+}
+
+div.text {
+    background-color: var(--color-text);
+}
+
+div.grouping {
+    background-color: var(--color-grouping);
+}
+
+div.forms {
+    background-color: var(--color-forms);
+    color: var(--font-colour-light);
+}
+
+div.document {
+    background-color: var(--color-document);
+    color: var(--font-colour-light);
+}
+
+div.interactive {
+    background-color: var(--color-interactive);
+    color: var(--font-colour-light);
+}
+
+div.embedding {
+    background-color: var(--color-embedding);
+    color: var(--font-colour-light);
+}
+
+div.empty {
+    border: none;
+}
+
+div.periodic-table {
+    font-family: var(--font-monospace-family);
+    display: grid;
+    grid-template-columns: repeat(18, var(--element-min-width));
+    grid-template-rows: repeat(7, var(--element-min-height)) calc(var(--element-min-height) * .25) var(--element-min-height);
+    grid-gap: var(--grid-gap);
+
+    /* last row */
+    /* div.element:nth-last-child(-n+18):hover {
+        transform-origin: bottom;
+    } */
+    
+    /* first column */
+    div.element:nth-child(18n+1):hover {
+        transform-origin: left;
+    }
+    
+    /* last column */
+    div.element:nth-child(18n+18):hover {
+        transform-origin: right;
+    }
+}
